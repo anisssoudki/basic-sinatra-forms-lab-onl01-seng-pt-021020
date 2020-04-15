@@ -1,14 +1,14 @@
+  
 require 'sinatra/base'
 
 class App < Sinatra::Base
 
-
-  get '/newteam' do  
+  get '/newteam' do
     erb :newteam
   end
-  
+
   post '/team' do
-    @name = params["Tname"]
+    @name = params["name"]
     @coach = params["coach"]
     @pg = params["pg"]
     @sg = params["sg"]
@@ -18,4 +18,5 @@ class App < Sinatra::Base
 
     erb :team
   end
+
 end
